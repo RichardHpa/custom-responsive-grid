@@ -1,0 +1,24 @@
+// @each $point, $value in $breakpoints {
+//     @if($value == 0){
+//         .container{
+//             max-width: 100%;
+//         }
+//     }
+//     @else {
+//         @media (min-width: $value){
+//             .container{
+//                 max-width: $value;
+//             }
+//         }
+//     }
+// }
+
+
+@mixin test($max-width: $container-max-widths, $breakpoint: $breakpoints){
+    @each $point, $container-max-width in $max-width {
+            .container{
+                max-width: $container-max-width;
+            }
+
+  }
+}
